@@ -12,7 +12,7 @@
 
 
 ## Data Types
-Javascript has a lot of differend types of data. You have strings which is just text, You have numbers, Booleans which is either `true` or `false`, and json (JavaScript Object Notation).\
+Javascript has a lot of different types of data. You have strings which is just text, You have numbers, Booleans which is either `true` or `false`, and json (JavaScript Object Notation).\
 
 ### Strings
 Strings are defined by using double quotation marks.\
@@ -27,7 +27,7 @@ Example:
 "Some" + "String" // This will become "SomeString"
 ```
 \
-You can also add things to a string by using `+=`. `+=` basicly means you add something to the value and then set the value to the new value.\
+You can also add things to a string by using `+=`. `+=` basically means you add something to the value and then set the value to the new value.\
 Example:
 ```js
 "SomeOther" += "String" // This will become "SomeOtherString"
@@ -37,10 +37,10 @@ Example:
 this might look the same as just adding 2 strings together but if you have a [variable](#variables) with a string value and you add that string to another string the variable will not change. This adds the string to the variable.
 
 ### Numbers
-Numbers are pretty self explainatory. Their just numbers.\
+Numbers are pretty self explanatory. Their just numbers.\
 There are however a few things that are important to know.\
 
-- `NaN` NaN literaly means `Not a Number`
+- `NaN` NaN literally means `Not a Number`
 
 - `Infinity` Infinity is exactly what it says
 
@@ -88,7 +88,7 @@ json looks like this:
 As you can see json has keys and values and the values can be any type, strings, numbers, booleans, or more json.\
 \
 You can use json like this:\
-(In this example [variables](#variables) and [logging](#logging) are used. Please reffer to [variables](#variables) and [logging](#logging) for an explination)
+(In this example [variables](#variables) and [logging](#logging) are used. Please refer to [variables](#variables) and [logging](#logging) for an explanation)
 ```js
 const someJson = {
     key: "value" // In javascript the key does not need to be a string, in .json files the keys do need to be a string. .json files also cannot have comments like this
@@ -101,22 +101,22 @@ console.log(someJson.key) // This will only log the specified value i.e. "value"
 \
 You can also modify json.\
 Example:\
-(In this example [variables](#variables) are used. Please reffer to [variables](#variables) for an explination)
+(In this example [variables](#variables) are used. Please refer to [variables](#variables) for an explanation)
 ```js
 const someJson = {
     key: "value"
 }
 
-key = "otherValue" // From now on someJson.key is "otherValue". Any code before this still sees someJson.key as "value", everything ater this will see it as "otherValue"
+key = "otherValue" // From now on someJson.key is "otherValue". Any code before this still sees someJson.key as "value", everything after this will see it as "otherValue"
 ```
 
 ### Undefined and Null
 - `Undefined` Undefined means that the value is not defined.
-- `Null` Null means that the value is assigned a Null value which basicly means that there is no value but it is defined.
+- `Null` Null means that the value is assigned a Null value which basically means that there is no value but it is defined.
 
 ## Logging
-Logging is verry important. Its used for debugging or just for getting information.\
-You can log everything, strings, numbers, booleans, json, even functions (altough without executing them it will just show up as something like this `[Function (exampleFunction)]`).\
+Logging is very important. Its used for debugging or just for getting information.\
+You can log everything, strings, numbers, booleans, json, even functions (although without executing them it will just show up as something like this `[Function (exampleFunction)]`).\
 To log something to the console you can use the `console.log` function.\
 Example:
 ```js
@@ -128,7 +128,7 @@ console.log(true); // Logs true to the console
 
 function exampleFunction() { return "someValue" }
 console.log(exampleFunction); // As explained above this will log [Function (exampleFunction)]
-console.log(exampleFunction()); // Here you actualy execute the function and this logs someValue as the function returns the string "someValue"
+console.log(exampleFunction()); // Here you actually execute the function and this logs someValue as the function returns the string "someValue"
 ```
 
 ## Variables
@@ -139,7 +139,7 @@ let x = 10;
 ```
 In this example i declare a variable named `x` and set it to `10`.
 
-When using the `let` keyword to declare a variable you can always assign a differend value to it just by entering the name of the variable followed by an equals sign followed by the new value.\
+When using the `let` keyword to declare a variable you can always assign a different value to it just by entering the name of the variable followed by an equals sign followed by the new value.\
 Example:
 ```js
 let x = 10; // Declare x and assign it a value of 10
@@ -147,10 +147,10 @@ let x = 10; // Declare x and assign it a value of 10
 x = 5; // Change the value to 5
 ```
 
-You can also declare variables withoud assigning it a value. You can always assign a value to it later.\
+You can also declare variables without assigning it a value. You can always assign a value to it later.\
 Example:
 ```js
-let x; // Declare x but dont assign it a value
+let x; // Declare x but don't assign it a value
 
 x = 5; // Set x to 5
 ```
@@ -161,7 +161,7 @@ Example:
 const x = 10;
 ```
 
-So the next example would give an error as you cannot reasign a constant variable.
+So the next example would give an error as you cannot resign a constant variable.
 ```js
 const x = 10;
 
@@ -169,5 +169,5 @@ x = 5; // Error
 ```
 
 ## Basic math
-Math is ofcourse also a thing. Its very easy
+Math is occurs also a thing. Its very easy
 # **WIP**
