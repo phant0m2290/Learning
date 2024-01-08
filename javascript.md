@@ -9,6 +9,9 @@
 - [Logging](#logging)
 - [variables](#variables)
 - [Basic math](#basic-math)
+- [Functions](#functions)
+    - [Normal functions](#normal-functions)
+    - [Anonymous functions](#anonymous-functions)
 
 
 ## Data Types
@@ -169,5 +172,69 @@ x = 5; // Error
 ```
 
 ## Basic math
-Math is of course also a thing. Its very easy
-# **WIP**
+Math is of course also a thing. Its very easy.\
+You have the basics like addition, subtracting, multiplication, dividing and modulus:
+```js
+1 + 1 // Addition
+
+1 - 1 // Subtraction
+
+1 * 1 // Multiplication
+
+1 / 1 // Dividing
+
+1 % 1 // Modulus
+```
+\
+And then of course you have brackets:
+```js
+(1 + 1) * 5 // Without brackets this would be 6. With them it is 10
+```
+If you know a little math you should know why this is but this is because the [order of operations](https://en.wikipedia.org/wiki/Order_of_operations).
+
+## Functions
+There are two types of functions
+
+### Normal functions
+Normal functions are declared like this:
+```js
+function exampleFunction() {
+
+}
+```
+and they can be executed like this:
+```js
+exampleFunction()
+```
+\
+But usually functions don't just execute code. You can also put arguments in them and they can also return values.\
+Example:
+```js
+function funcWithArgs(argument) { // In this case i put a name in the brackets and that will be available as a variable inside the function
+    console.log(argument); // Log the argument value
+}
+
+funcWithArgs("someString"); // Execute the function with the argument "someString". In this case it will log the argument so that would be "someString"
+```
+\
+And then they can also return values.\
+Example:
+```js
+function funcThatReturns() {
+    return "someValue" // return "someValue"
+}
+
+console.log(funcThatReturns()); // Logs "someValue"
+const x = funcThatReturns(); // Create a constant variable with the value that the function returns so in this case "someValue"
+```
+
+### Anonymous functions
+Anonymous functions are just like normal functions but their defined differently.\
+Example:
+```js
+const anonFunction = () => {
+
+}
+```
+So a variable is created and then you set the variable to the function.\
+you start with the brackets where you can put your arguments in, then an arrow `=>` to define the code that runs when the function is executed and then the curly brackets where you put the code in
