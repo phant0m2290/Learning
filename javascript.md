@@ -169,5 +169,5 @@ x = 5; // Error
 ```
 
 ## Basic math
-Math is occurs also a thing. Its very easy
+Math is of course also a thing. Its very easy
 # **WIP**
