@@ -1,17 +1,20 @@
 # Learning javascript
 ## Index
-- [Data Types](#data-types)
+- [Learning javascript](#learning-javascript)
+  - [Index](#index)
+  - [Data Types](#data-types)
     - [Strings](#strings)
     - [Numbers](#numbers)
     - [Booleans](#booleans)
-    - [JSON](#json-javascript-object-notation)
+    - [JSON (JavaScript Object Notation)](#json-javascript-object-notation)
     - [Undefined and Null](#undefined-and-null)
-- [Logging](#logging)
-- [variables](#variables)
-- [Basic math](#basic-math)
-- [Functions](#functions)
+  - [Logging](#logging)
+  - [Variables](#variables)
+  - [Basic math](#basic-math)
+  - [Functions](#functions)
     - [Normal functions](#normal-functions)
     - [Anonymous functions](#anonymous-functions)
+  - [If statements](#if-statements)
 
 
 ## Data Types
@@ -33,7 +36,7 @@ Example:
 You can also add things to a string by using `+=`. `+=` basically means you add something to the value and then set the value to the new value.\
 Example:
 ```js
-"SomeOther" += "String" // This will become "SomeOtherString"
+"Some other" += "string" // This will become "Some otherstring"
 
 "abcdef" += "g" // This will become "abcdefg"
 ```
@@ -60,7 +63,9 @@ Examples:
 
 4 < 2 // Checks if 4 is lower than 2 using < (Less than symbol). This will be false as 4 is greater than 2tInfinity
 
-4 == 4 // Checks if 4 equals to 4 by using == (Equals to). This will be true as 4 equals to 4
+4 == 4 // Checks if 4 has the same value as 4 by using == (Equal to). This will be true as 4 has the same value as 4
+
+4 === "4" // Checks if 4 has the same value and type as "4" by using === (Equal value and type). This will be false as 4 has the same value as "4" but not the same type as one is a number and the other a string
 
 4 != 4 // Checks if 4 is not 4 by using != (Not equals to). This will be false as 4 equals to 4
 ```
@@ -110,7 +115,7 @@ const someJson = {
     key: "value"
 }
 
-key = "otherValue" // From now on someJson.key is "otherValue". Any code before this still sees someJson.key as "value", everything after this will see it as "otherValue"
+key = "other value" // From now on someJson.key is "other value". Any code before this still sees someJson.key as "value", everything after this will see it as "other value"
 ```
 
 ### Undefined and Null
@@ -129,7 +134,7 @@ console.log("Hello, World!"); // Logs Hello, World! to the console
 
 console.log(true); // Logs true to the console
 
-function exampleFunction() { return "someValue" }
+function exampleFunction() { return "some value" }
 console.log(exampleFunction); // As explained above this will log [Function (exampleFunction)]
 console.log(exampleFunction()); // Here you actually execute the function and this logs someValue as the function returns the string "someValue"
 ```
@@ -214,17 +219,23 @@ function funcWithArgs(argument) { // In this case i put a name in the brackets a
     console.log(argument); // Log the argument value
 }
 
-funcWithArgs("someString"); // Execute the function with the argument "someString". In this case it will log the argument so that would be "someString"
+funcWithArgs("some string"); // Execute the function with the argument "someString". In this case it will log the argument so that would be "someString"
+
+function funcWithMoreArgs(argument1, argument2) { // Function with 2 arguments
+    console.log(argument1, argument2); // Log both arguments value
+}
+
+funcWithMoreArgs("first string", "second string"); // Execute the function with the arguments "first string" and "second string"
 ```
 \
 And then they can also return values.\
 Example:
 ```js
 function funcThatReturns() {
-    return "someValue" // return "someValue"
+    return "some value" // return "some value"
 }
 
-console.log(funcThatReturns()); // Logs "someValue"
+console.log(funcThatReturns()); // Logs "some value"
 const x = funcThatReturns(); // Create a constant variable with the value that the function returns so in this case "someValue"
 ```
 
@@ -238,3 +249,35 @@ const anonFunction = () => {
 ```
 So a variable is created and then you set the variable to the function.\
 you start with the brackets where you can put your arguments in, then an arrow `=>` to define the code that runs when the function is executed and then the curly brackets where you put the code in
+
+## If statements
+If statements can be used to check if a value is true.\
+They start with `if` and can have multiple `else if` statements and optionaly at the end an `else` statement.\
+If statements are like functions without the arguments and return value.\
+
+There are also some logical operators:\
+- `==` Equals value > This will check if the value is the same as another value but does not check if its the same type. Example: `1 == 1` will return true `1 == "1"` will also return true
+- `===` Equals value and type > This will check if the value is the same as another value and if the type is the same. Example: `1 == 1` will return true but `1 == "1"` will return false
+- `||` OR > Check if at least one of the values is true. Example: `1 == 5 || 10 < 11` In this case the whole thing will be true as one of the statements is true. 1 is not 5 and therefor `false` but 10 is less than 11 and therefor `true` and since we use the or operator if either is `true` the whole thing is `true` so this would be true
+- `&&` AND > Check if all values are true. Example: `1 == 5 || 10 < 11` This will return `false` as one statement is `true` and one is `false`. 1 is not 5 and therefor `false` but 10 is less than 11 and therefor `true` and since we use the and operator if either is `false` the whole thing is `false`
+
+Example:
+```js
+const x = 5;
+
+if (x > 4) {
+    console.log("x is higher than 4");
+} else {
+    console.log("x is or is less than 4");
+}
+
+if (x == 4) {
+    console.log("x is 4");
+} else if (x < 4) {
+    console.log("x is less than 4");
+} else if (x > 5) {
+    console.log("x is greater than 5");
+} else {
+    console.log("x is 5 as its not 4, greater than 5 and less than 4");
+}
+```
