@@ -36,20 +36,26 @@ If things are in square brackets **[ ]** its a required argument.
 If things are in normal brackets **( )** its an optional argument
 
 ### cd [path]
-The `cd` command makes you move between directories.\
+The `cd` (meaning "change directory") command makes you move between directories.\
 Examples:
 ```ps
-PS E:\Programming\teaching> cd . # This will stay in the current directory as . means the current directory
+PS E:\Programming\teaching> cd . 
+# This will stay in the current directory as . means the current directory
 
-PS E:\Programming\teaching> cd .\someDir # This will go to E:\Programming\teaching\someDir as you go to the current directory and then into the directory called someDir
+PS E:\Programming\teaching> cd .\someDir 
+# This will go to E:\Programming\teaching\someDir as you go to the current directory and then into the directory called someDir
 
-PS E:\Programming\teaching> cd .. # This will go you E:\Programming as .. means the previous directory
+PS E:\Programming\teaching> cd .. 
+# This will go you E:\Programming as .. means the previous directory
 
-PS E:\Programming\teaching> cd \ # This will go to E:\ as \ means the root of the drive
+PS E:\Programming\teaching> cd \ 
+# This will go to E:\ as \ means the root of the drive
 
-PS E:\Programming\teaching> cd \Programs # This will go to E:\Programs as \ means the root of the drive and from there you go into the Programs folder
+PS E:\Programming\teaching> cd \Programs 
+# This will go to E:\Programs as \ means the root of the drive and from there you go into the Programs folder
 
-PS E:\Programming\teaching> cd ..\someDir # This will go to E:\Programming\someDir as you go 1 directory back using .. and then into the directory called someDir
+PS E:\Programming\teaching> cd ..\someDir 
+# This will go to E:\Programming\someDir as you go 1 directory back using .. and then into the directory called someDir
 ```
 
 ### ls (path)

@@ -55,19 +55,28 @@ Booleans are either `true` or `false`. They are mainly used for things that can 
 They are mainly used for statements.\
 Examples:
 ```js
-11 > 10 // Checks if 11 is greater than 10 using > (Greater than symbol). This will be true as 11 is bigger than 10
+11 > 10
+// Checks if 11 is greater than 10 using > (Greater than symbol). This will be true as 11 is bigger than 10
 
-9 >= 10 // Checks if 9 is equals or greater than 10 using >= (Greater than or equals to symbol). This will be false as 9 is not 10 nor greater than 10
+9 >= 10
+// Checks if 9 is equals or greater than 10 using >= (Greater than or equals to symbol).
+// This will be false as 9 is not 10 nor greater than 10
 
-11 <= 11 // Checks if 11 is equals or lower than 11 using <= (Less or equals to symbol). This will be true as 11 equals to 11
+11 <= 11
+// Checks if 11 is equals or lower than 11 using <= (Less or equals to symbol). This will be true as 11 equals to 11
 
-4 < 2 // Checks if 4 is lower than 2 using < (Less than symbol). This will be false as 4 is greater than 2tInfinity
+4 < 2
+// Checks if 4 is lower than 2 using < (Less than symbol). This will be false as 4 is greater than 2tInfinity
 
-4 == 4 // Checks if 4 has the same value as 4 by using == (Equal to). This will be true as 4 has the same value as 4
+4 == 4
+// Checks if 4 has the same value as 4 by using == (Equal to). This will be true as 4 has the same value as 4
 
-4 === "4" // Checks if 4 has the same value and type as "4" by using === (Equal value and type). This will be false as 4 has the same value as "4" but not the same type as one is a number and the other a string
+4 === "4"
+// Checks if 4 has the same value and type as "4" by using === (Equal value and type).
+// This will be false as 4 has the same value as "4" but not the same type as one is a number and the other a string
 
-4 != 4 // Checks if 4 is not 4 by using != (Not equals to). This will be false as 4 equals to 4
+4 != 4 
+// Checks if 4 is not 4 by using != (Not equals to). This will be false as 4 equals to 4
 ```
 You can also invert a boolean by using an exclamation mark.\
 Example:
@@ -99,7 +108,9 @@ You can use json like this:\
 (In this example [variables](#variables) and [logging](#logging) are used. Please refer to [variables](#variables) and [logging](#logging) for an explanation)
 ```js
 const someJson = {
-    key: "value" // In javascript the key does not need to be a string, in .json files the keys do need to be a string. .json files also cannot have comments like this
+    key: "value"
+    // In javascript the key does not need to be a string, in .json files the keys do need to be a string.
+    // .json files also cannot have comments like this
 }
 
 console.log(someJson) // This will log the json object as a whole i.e. {key: "value"}
@@ -115,7 +126,9 @@ const someJson = {
     key: "value"
 }
 
-key = "other value" // From now on someJson.key is "other value". Any code before this still sees someJson.key as "value", everything after this will see it as "other value"
+key = "other value"
+// From now on someJson.key is "other value".
+// Any code before this still sees someJson.key as "value", everything after this will see it as "other value"
 ```
 
 ### Undefined and Null
@@ -135,8 +148,11 @@ console.log("Hello, World!"); // Logs Hello, World! to the console
 console.log(true); // Logs true to the console
 
 function exampleFunction() { return "some value" }
+
 console.log(exampleFunction); // As explained above this will log [Function (exampleFunction)]
-console.log(exampleFunction()); // Here you actually execute the function and this logs someValue as the function returns the string "someValue"
+
+console.log(exampleFunction());
+// Here you actually execute the function and this logs someValue as the function returns the string "someValue"
 ```
 
 ## Variables
@@ -215,17 +231,21 @@ exampleFunction()
 But usually functions don't just execute code. You can also put arguments in them and they can also return values.\
 Example:
 ```js
-function funcWithArgs(argument) { // In this case i put a name in the brackets and that will be available as a variable inside the function
+function funcWithArgs(argument) {
+    // In this case i put a name in the brackets and that will be available as a variable inside the function
+
     console.log(argument); // Log the argument value
 }
 
-funcWithArgs("some string"); // Execute the function with the argument "someString". In this case it will log the argument so that would be "someString"
+funcWithArgs("some string");
+// Execute the function with the argument "someString". In this case it will log the argument so that would be "someString"
 
 function funcWithMoreArgs(argument1, argument2) { // Function with 2 arguments
     console.log(argument1, argument2); // Log both arguments value
 }
 
-funcWithMoreArgs("first string", "second string"); // Execute the function with the arguments "first string" and "second string"
+funcWithMoreArgs("first string", "second string");
+// Execute the function with the arguments "first string" and "second string"
 ```
 \
 And then they can also return values.\
@@ -236,7 +256,9 @@ function funcThatReturns() {
 }
 
 console.log(funcThatReturns()); // Logs "some value"
-const x = funcThatReturns(); // Create a constant variable with the value that the function returns so in this case "someValue"
+
+const x = funcThatReturns();
+// Create a constant variable with the value that the function returns so in this case "someValue"
 ```
 
 ### Anonymous functions
@@ -280,4 +302,13 @@ if (x == 4) {
 } else {
     console.log("x is 5 as its not 4, greater than 5 and less than 4");
 }
+```
+
+The statements can also be inline like this:
+```js
+const x = 5;
+
+if (x < 5) console.log("x is lower than 5");
+else if (x == 5) console.log("x is 5");
+else console.log("x is greater than 5");
 ```

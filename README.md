@@ -4,6 +4,6 @@ From here you can learn the basics of typescript and all the general things you 
 ## Index (in reccomended order)
 - [terminal](./terminal.md)
 - [Visual Studio Code](./vscode.md)
-- [Deno](./deno.md) **WIP**
+- [Deno](./deno.md)
 - [Javascript](./javascript.md)
-- [Typescript](./typescript.md) **WIP**
+- [Typescript](./typescript.md)
